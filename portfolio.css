@@ -1,0 +1,190 @@
+:root{
+  --primary:#2b6ef6;
+  --bg:#0b0b0b;
+  --light-bg:#f7f7f9;
+  --text:#e9eef8;
+  --muted:#a9b7dc;
+  --card-bg: #000000;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header */
+#header{
+  background:transparent;
+  padding:12px 0;
+}
+.logo{
+  font-weight:700;
+  color:var(--text);
+  text-decoration:none;
+  font-size:1.25rem;
+}
+
+/* Navbar links */
+.navbar ul{list-style:none; margin:0; padding:0; display:flex; gap:16px;}
+.navbar a{color:var(--text); text-decoration:none; padding:8px 10px; border-radius:6px;}
+.navbar a:hover{background:rgba(255,255,255,0.04);}
+
+/* HERO */
+#hero{
+  position:relative;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image: url("assests/img/background.png");
+  background-size:cover;
+  background-position:center;
+}
+#hero .overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+  z-index:0;
+}
+.hero-content{
+  position:relative;
+  z-index:5;
+  max-width:900px;
+  padding:20px;
+}
+.hero-title{
+  font-size:2.4rem;
+  margin:0;
+  color:var(--text);
+  font-weight:600;
+}
+.name{color:var(--primary)}
+
+/* Typed text center & style */
+.typed-wrap{margin-top:12px}
+.typed-text{
+  display:block;
+  font-size:1.35rem;
+  font-weight:600;
+  color:var(--text);
+  text-align:center;        /* centers typed text */
+}
+
+/* social icons */
+.social a{color:var(--text); font-size:1.2rem}
+
+/* ABOUT */
+#about {
+  background: #ffffff; /* clean white for contrast */
+  color: #333333; /* dark text for readability */
+  padding: 80px 0;
+}
+
+#about h2 {
+  color: #2b6ef6; /* keep your primary blue */
+}
+
+#about p {
+  color: #555555; /* medium-dark grey for body text */
+}
+
+.skills .skill span{display:block; font-weight:600; margin-bottom:6px; color:#2b6ef6;}
+.progress{height:10px; background:#e0e4ec; border-radius:6px; overflow:hidden;}
+.progress-bar{width:0%; height:100%; background:#2b6ef6; transition:width 1s ease; color:#fff; font-weight:600; text-align:right; padding-right:8px; font-size:12px}
+
+/* Projects */
+#projects{color:#111; background:var(--light-bg)}
+.project-card{border:none; overflow:hidden; border-radius:10px; box-shadow:0 8px 30px rgba(4,9,20,0.08)}
+.project-card img{height:200px; object-fit:cover;}
+.filters .btn.active{background:var(--primary); color:#fff}
+
+/* CONTACT */
+/* Contact Section Background */
+#contact {
+  background-color: #0D1B2A; /* Dark Navy */
+  padding: 60px 20px;
+  color: #E0E1DD; /* Light Gray text */
+}
+
+/* Section Heading */
+#contact h2 {
+  color: #E0E1DD;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Layout - side by side icon + input */
+#contact .form-group {
+  display: flex;
+  align-items: center; /* Vertically center for inputs */
+  margin-bottom: 15px;
+}
+
+#contact .form-group textarea {
+  align-items: flex-start; /* This won't affect textarea inside flex directly */
+}
+
+/* Icon Styling */
+#contact .icon {
+  color: #778DA9;
+  font-size: 1.5rem;
+  margin-right: 8px;
+  padding-top: 5px; /* Slight spacing for normal inputs */
+}
+
+#contact .form-group.textarea-group .icon {
+  align-self: flex-start; /* Move icon to top for textarea */
+  padding-top: 12px; /* Adjust to match text area padding */
+}
+
+/* Input & Textarea Styling */
+#contact input,
+#contact textarea {
+  flex: 1; /* Take remaining space */
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1B263B; /* Deep Blue-Gray */
+  color: #E0E1DD; /* Light text */
+  font-size: 1rem;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #778DA9; /* Muted Blue placeholder */
+}
+
+/* Button Styling */
+#contact button {
+  background-color: #1E90FF; /* Bright Blue */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #00B4D8; /* Cyan Blue hover */
+}
+
+
+
+
+/* Footer */
+footer{background:#050505; color:rgba(255,255,255,0.6)}
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero-title{font-size:1.6rem}
+  .profile-img{width:150px; height:150px}
+  .typed-text{font-size:1.05rem}
+}
